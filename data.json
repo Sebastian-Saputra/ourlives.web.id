@@ -3,7 +3,7 @@
     "id": "momen-01",
     "judul_kegiatan": "Jogja Kelas 10",
     "kategori": "Hangout",
-    "tanggal": "25-06-2025SS",
+    "tanggal": "25-06-2025",
     "deskripsi": "Momen pertama kali kelas X TJKT 1 24/25 liburan kelas bersama Bu Mey.",
     "foto": [
       {
@@ -14,13 +14,13 @@
   },
   {
     "id": "momen-02",
-    "judul_kegiatan": "Main Bareng Habis Ujian",
-    "kategori": "Hangout",
-    "tanggal": "2026-10-20",
-    "deskripsi": "Menikmati waktu santai bersama setelah menyelesaikan ujian. Momen sederhana yang menyenangkan.",
+    "judul_kegiatan": "IOT",
+    "kategori": "Praktikum",
+    "tanggal": "05-11-2026",
+    "deskripsi": "Foto di Lab IOT.",
     "foto": [
       {
-        "src": "assets/images/momen/hangout-pantai-1.webp",
+        "src": "assets/images/momen/iot.webp",
         "alt": "Kebersamaan saat bermain bersama"
       }
     ]
