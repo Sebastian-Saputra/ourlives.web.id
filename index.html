@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f7f5">
+  <meta name="description" content="Our Lives — arsip digital berisi cerita dan kenangan bersama teman-teman sekelas.">
+  <title>Our Lives — Class Memories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#memories">Lewati ke galeri</a>
+
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Our Lives, beranda">
+      <span class="brand-mark">OL.</span>
+      <span>our lives</span>
+    </a>
+    <nav class="header-nav" aria-label="Navigasi utama">
+      <a href="#memories">Memories</a>
+      <a href="#timeline">Timeline</a>
+      <a href="#about">About</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Ganti tema" title="Ganti tema">
+      <svg class="icon icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+      <svg class="icon icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 15.5A8.5 8.5 0 0 1 8.5 3.5 8.5 8.5 0 1 0 20.5 15.5Z"></path></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A LITTLE ARCHIVE OF US</p>
+        <h1 id="heroTitle">The days we’ll<br><span>remember.</span></h1>
+        <p class="hero-description">Kumpulan cerita, tawa, dan momen sederhana yang pernah kita lewati bersama. Disimpan di sini, supaya suatu hari nanti kita bisa mengingatnya lagi.</p>
+        <a class="text-link" href="#memories">Jelajahi kenangan <span aria-hidden="true">↘</span></a>
+      </div>
+      <figure class="hero-image-wrap">
+        <img id="heroImage" src="assets/images/hero/class-photo.webp" alt="Foto kebersamaan kelas" fetchpriority="high">
+        <figcaption id="heroCaption">One class, countless stories.</figcaption>
+      </figure>
+      <div class="hero-index" aria-hidden="true">01 <span>—</span> 04</div>
+    </section>
+
+    <section class="intro-strip" aria-label="Pengantar galeri">
+      <p>COLLECTED MOMENTS <span>·</span> SHARED STORIES <span>·</span> OUR LITTLE HISTORY</p>
+      <p class="intro-note">Scroll a little, remember a lot.</p>
+    </section>
+
+    <section class="memories-section section-shell" id="memories">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">THE MEMORY ARCHIVE</p>
+          <h2>Every moment<br><span>has a story.</span></h2>
+        </div>
+        <p class="section-description">Tidak harus menjadi momen besar untuk layak dikenang. Beberapa hal sederhana justru paling dirindukan.</p>
+      </div>
+
+      <div class="gallery-toolbar">
+        <div class="filter-list" id="filterList" role="group" aria-label="Filter kategori">
+          <button class="filter-button is-active" type="button" data-category="Semua">Semua momen</button>
+          <button class="filter-button" type="button" data-category="Praktek">Praktek &amp; belajar</button>
+          <button class="filter-button" type="button" data-category="Sekolah">Acara sekolah</button>
+          <button class="filter-button" type="button" data-category="Hangout">Hangout</button>
+          <button class="filter-button" type="button" data-category="Random">Momen acak</button>
+        </div>
+        <label class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m16 16 4 4"></path></svg>
+          <input id="searchInput" type="search" placeholder="Cari kenangan..." autocomplete="off">
+          <kbd>/</kbd>
+        </label>
+      </div>
+
+      <div class="results-meta">
+        <span id="resultsCount">Memuat kenangan...</span>
+        <button class="random-button" id="randomButton" type="button"><span aria-hidden="true">✳</span> Surprise me</button>
+      </div>
+
+      <div class="gallery" id="gallery" aria-live="polite"></div>
+      <p class="empty-state" id="emptyState" hidden>Tidak ada momen yang cocok. Coba kata kunci atau kategori lain.</p>
+    </section>
+
+    <section class="timeline-section section-shell" id="timeline">
+      <div class="timeline-heading">
+        <div>
+          <p class="eyebrow">A JOURNEY THROUGH TIME</p>
+          <h2>Little moments,<br><span>big memories.</span></h2>
+        </div>
+        <p class="section-description">Setiap foto adalah potongan kecil dari perjalanan kita. Ini urutannya.</p>
+      </div>
+      <div class="timeline" id="timelineList">
+        <p class="loading-note">Menyiapkan timeline...</p>
+      </div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="about-inner">
+        <p class="eyebrow">MORE THAN JUST PHOTOGRAPHS</p>
+        <h2>We were here.<br><span>And it mattered.</span></h2>
+        <p>Website ini dibuat sebagai ruang kecil untuk menyimpan hal-hal yang mungkin akan kita ceritakan kembali bertahun-tahun dari sekarang. Terima kasih sudah menjadi bagian dari ceritanya.</p>
+        <span class="about-signature">— our lives, our story.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand" href="#"><span class="brand-mark">OL.</span><span>our lives</span></a>
+    <p>Made with memories. <span id="currentYear"></span></p>
+    <a href="#top" class="back-top">Back to top ↑</a>
+  </footer>
+
+  <!-- Lightbox: satu kegiatan dapat memiliki beberapa foto. -->
+  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Detail foto">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Tutup">×</button>
+    <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" type="button" aria-label="Foto sebelumnya">‹</button>
+    <div class="lightbox-content">
+      <div class="lightbox-image-area">
+        <img id="lightboxImage" src="" alt="">
+        <span class="lightbox-counter" id="lightboxCounter"></span>
+      </div>
+      <div class="lightbox-info">
+        <p class="eyebrow" id="lightboxCategory"></p>
+        <h2 id="lightboxTitle"></h2>
+        <p class="lightbox-date" id="lightboxDate"></p>
+        <p class="lightbox-description" id="lightboxDescription"></p>
+      </div>
+    </div>
+    <button class="lightbox-arrow lightbox-next" id="lightboxNext" type="button" aria-label="Foto berikutnya">›</button>
+  </div>
+
+  <noscript>Website ini membutuhkan JavaScript agar galeri dan filter dapat ditampilkan.</noscript>
+</body>
+</html>
